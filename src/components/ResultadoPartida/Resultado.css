@@ -1,0 +1,80 @@
+#container_resultado {
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 850px;
+    height: 230px;
+}
+#container_resultado .div_img {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: solid 20px;
+}
+#container_resultado .ganhador {
+    box-shadow: 5px 5px 100px 10px white;
+}
+#container_resultado #div_Jogador {
+    border-color: blue;
+}
+#container_resultado #div_IA {
+    border-color: red;
+}
+#container_resultado .paragrafh {
+    font-size: .8em;
+    font-weight: bold;
+}
+#container_resultado .img {
+    width: 60px;
+}
+#container_resultado #div_Text {
+    color: white;
+    font-weight: bold;
+    height: 100px;
+}
+
+
+
+
+/* Button voltar {continuar} */
+#continuar {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    border: solid 2px rgb(0, 0, 0);
+    overflow: hidden;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 40px;
+    transition: .7s ease;
+}
+#continuar::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(40deg);
+    content: '';
+    background-color: rgb(0, 0, 0);
+
+    width: 0px;
+    height: 350%;
+    transition: .7s ease;
+}
+
+#continuar:hover {
+    color: white;
+}
+#continuar:hover::before {
+    z-index: -1;
+    width: 100%;
+}

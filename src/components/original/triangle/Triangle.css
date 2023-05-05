@@ -1,0 +1,91 @@
+#container-de-triangulo {
+    position: relative;
+    display: inline-block;
+    padding: 40px;
+}
+
+#container-de-triangulo #triangle {
+    width: 220px;
+}
+
+#container-de-triangulo button {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    
+    transition: .5s;
+}
+#container-de-triangulo button:Hover {
+    box-shadow: 2px 2px 20px 2px rgba(255, 255, 255, 0.452);
+}
+#container-de-triangulo button#rock {
+    border: 12px solid rgba(255, 0, 0, 0.806);
+    top: 0;
+    left: 0;
+}
+#container-de-triangulo button#scissors {
+    border: 12px solid rgba(255, 255, 0, 0.807);
+    top: 0;
+    right: 0;
+}
+#container-de-triangulo button#paper {
+    border: 12px solid rgba(0, 0, 255, 0.863);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* ESTILO PARA O BUTÃO DE TROCAR DE JOGO */
+#root #proximo {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    border: solid 2px rgb(0, 0, 0);
+    overflow: hidden;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 40px;
+    transition: .7s ease;
+}
+#proximo::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(40deg);
+    content: '';
+    background-color: rgb(0, 0, 0);
+
+    width: 0px;
+    height: 300%;
+    transition: .7s ease;
+}
+
+#root #proximo:hover {
+    color: white;
+}
+#root #proximo:hover::before {
+    z-index: -1;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 840px) {
+    #root #proximo {
+        height: 50px;
+        width: 200px;
+        left: 50%;
+        top:90%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 420px) {
+    #container-de-triangulo #triangle {
+        width: 180px;
+    }
+}

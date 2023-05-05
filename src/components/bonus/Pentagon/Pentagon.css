@@ -1,0 +1,103 @@
+#container-de-Pentagon {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+}
+
+#container-de-Pentagon #Pentagon {
+    width: 300px;
+}
+
+#container-de-Pentagon button {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 95px;
+    height: 95px;
+    
+    transition: .5s;
+}
+#container-de-Pentagon button:Hover {
+    box-shadow: 2px 2px 20px 2px rgba(255, 255, 255, 0.452);
+}
+#container-de-Pentagon button#rock {
+    border: 12px solid rgba(255, 0, 0, 0.806);
+    bottom: 25px;
+    right: 19%;
+}
+#container-de-Pentagon button#scissors {
+    border: 12px solid rgba(255, 255, 0, 0.807);
+    top: 21px;
+    left: 50%;
+    transform: translateX(-51%);
+}
+#container-de-Pentagon button#paper {
+    border: 12px solid rgba(0, 0, 255, 0.863);
+    top: 50%;
+    right: 22px;
+    transform: translateY(-77%);
+}
+#container-de-Pentagon button#lizard {
+    border: 12px solid rgba(0, 255, 4, 0.863);
+    bottom: 25px;
+    left: 18%;
+}
+#container-de-Pentagon button#spock {
+    border: 12px solid rgba(0, 255, 191, 0.863);
+    top: 51%;
+    left: 20px;
+    transform: translateY(-77%);
+}
+
+
+
+/* Button voltar para jogo original */
+#root #voltar {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    color: black;
+    border: solid 2px rgb(0, 0, 0);
+    overflow: hidden;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 40px;
+    transition: .7s ease;
+}
+#voltar::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(40deg);
+    content: '';
+    background-color: rgb(0, 0, 0);
+
+    width: 0px;
+    height: 300%;
+    transition: .7s ease;
+}
+
+#root #voltar:hover {
+    color: white;
+}
+#root #voltar:hover::before {
+    z-index: -1;
+    width: 100%;
+}
+
+@media screen and (max-width: 840px) {
+    #root #voltar {
+        height: 50px;
+        width: 200px;
+        left: 50%;
+        top:90%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 420px) {
+    #container-de-Pentagon #Pentagon {
+        width: 270px;
+    }
+}
