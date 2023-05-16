@@ -44,7 +44,7 @@
     top: 50%;
     right: 2%;
     transform: translateY(-50%);
-    color: rgb(0, 0, 0);
+    color: black;
     border: solid 2px rgb(0, 0, 0);
     overflow: hidden;
     border-radius: 10px;
@@ -66,10 +66,10 @@
     transition: .7s ease;
 }
 
-#root #proximo:hover {
+#proximo:hover {
     color: white;
 }
-#root #proximo:hover::before {
+#proximo:hover::before {
     z-index: -1;
     width: 100%;
 }

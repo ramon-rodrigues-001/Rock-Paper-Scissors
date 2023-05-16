@@ -79,10 +79,10 @@
     transition: .7s ease;
 }
 
-#root #voltar:hover {
+#voltar:hover {
     color: white;
 }
-#root #voltar:hover::before {
+#voltar:hover::before {
     z-index: -1;
     width: 100%;
 }
